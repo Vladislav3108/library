@@ -5,24 +5,28 @@ pragma solidity >=0.7.0 <0.9.0;
 contract Calculator {
     uint256 public res;
     uint256 result;
-    function sum (uint256 _firNum, uint256 _secNum) public returns(uint256 ){
+    function sum (uint256 _firNum, uint256 _secNum, uint256 _sys) public returns(uint256 ){
        res=_firNum+_secNum;
-       return res;
+       uint256 res1=tr(res, _sys);
+       return res1;
     }
 
-    function sub (uint256 _firNum, uint256 _secNum) public returns(uint256 ){
+    function sub (uint256 _firNum, uint256 _secNum, uint256 _sys) public returns(uint256 ){
        res=_firNum-_secNum;
-       return res;
+       uint256 res1=tr(res, _sys);
+       return res1;
     }
 
-    function div (uint256 _firNum, uint256 _secNum) public returns(uint256 ){
+    function div (uint256 _firNum, uint256 _secNum, uint256 _sys) public returns(uint256 ){
        res=_firNum/_secNum;
-       return res;
+       uint256 res1=tr(res, _sys);
+       return res1;
     }
 
-    function mul (uint256 _firNum, uint256 _secNum) public returns(uint256 ){
+    function mul (uint256 _firNum, uint256 _secNum, uint256 _sys) public returns(uint256 ){
        res=_firNum*_secNum;
-       return res;
+       uint256 res1=tr(res, _sys);
+       return res1;
     }
 
     function tr(uint256 resu, uint256 _sys) public returns(uint256 ){
